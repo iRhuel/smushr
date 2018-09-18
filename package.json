@@ -1,43 +1,32 @@
 {
   "name": "smush",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "version": "0.1.0",
+  "description": "a command line tool to aggregate discrete data points into a single readable result",
+  "main": "index.js",
+  "dependencies": {
+    "commander": "^2.18.0"
+  },
+  "devDependencies": {},
   "scripts": {
-    "build": "npm run less && webpack -p",
-    "start": "npm run build & node server.js",
-    "watch-less": "less-watch-compiler src/css dist/css style.less",
-    "watch-js": "webpack -w --mode development",
-    "watch-server": "node server.js",
-    "dev": "concurrently --kill-others \"npm:watch-*\"",
-    "less": "lessc src/css/style.less dist/css/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "express": "^4.16.3",
-    "morgan": "^1.9.0",
-    "react": "^16.5.0",
-    "react-dom": "^16.5.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iRhuel/smush.git"
   },
-  "author": "iRhuel",
+  "keywords": [
+    "smush",
+    "json",
+    "cli",
+    "command-line"
+  ],
+  "author": "Phil Truong",
   "license": "ISC",
-  "devDependencies": {
-    "babel": "^6.23.0",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1",
-    "babel-register": "^6.26.0",
-    "chai": "^4.1.2",
-    "concurrently": "^3.6.1",
-    "css-loader": "^1.0.0",
-    "less": "^3.8.0",
-    "less-loader": "^4.1.0",
-    "less-watch-compiler": "^1.11.3",
-    "mocha": "^5.2.0",
-    "style-loader": "^0.21.0",
-    "webpack": "^4.17.2",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
-  }
+  "bin": {
+    "smush": "./index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/iRhuel/smush/issues"
+  },
+  "homepage": "https://github.com/iRhuel/smush#readme"
 }
