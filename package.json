@@ -1,6 +1,6 @@
 {
-  "name": "smush",
-  "version": "0.1.0",
+  "name": "smushr",
+  "version": "1.0.0",
   "description": "a command line tool to aggregate discrete data points into a single readable result",
   "main": "index.js",
   "dependencies": {
@@ -16,6 +16,7 @@
   },
   "keywords": [
     "smush",
+    "smushr",
     "json",
     "cli",
     "command-line"

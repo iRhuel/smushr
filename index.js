@@ -4,9 +4,11 @@ const fs = require('fs');
 const resolve = require('path').resolve;
 const smush = require('./lib/smush');
 const files = require('./lib/files');
+const version = require('./package.json').version;
 
 program
     .arguments('<path>')
+    .version(version, '-v, --version')
     .action(path => {
         const result = {};
         files(resolve(path), (err, list) => {
