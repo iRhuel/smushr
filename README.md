@@ -9,7 +9,7 @@ that are not already represented into a single array under the same key. If the 
 combines subsequent objects under the same key in the same way, preserving nested structure. If the value at a key is
 an array, it checks each object against present objects for key parity, and treats objects with the same keys as the 
 same object. Lastly, it writes the resultant object to a file `./smushed.json`, in the directory where the command was
-executed. 
+executed.
 
 ## Getting Started
 
@@ -21,7 +21,7 @@ executed.
 - in terminal, navigate to location with .json files to be combined
 - run `smush <dir>`, where `<dir>` is the relative path to the target folder, from the terminal's current directory
 
-## Example 
+## Example
 
 ###### ./A.json
 ```$xslt
