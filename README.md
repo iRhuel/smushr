@@ -19,7 +19,9 @@ executed.
 
 - open a terminal
 - in terminal, navigate to location with .json files to be combined
-- run `smush <dir>`, where `<dir>` is the relative path to the target folder, from the terminal's current directory
+- run `smush [paths...]`, where `[paths...]` is a list of relative paths to the target folders from the current directory, separated by spaces.
+- use the `-o` or `--output` flag to specify the output file name ( e.g. running `smush . -o test` will produce `./test.json` )
+- include the `-r` or `--recursive` flag to also include subdirectories for parsing.
 
 ## Example
 
@@ -39,7 +41,7 @@ executed.
 }
 ```
 
-###### ./dir/B.json
+###### ./B.json
 
 ```$xslt
 {
