@@ -2,7 +2,7 @@
   "name": "smushr",
   "version": "1.1.0",
   "description": "a command line tool to aggregate discrete data points into a single readable result",
-  "main": "index.js",
+  "main": "smush.js",
   "dependencies": {
     "commander": "^2.18.0"
   },
@@ -24,7 +24,7 @@
   "author": "Phil Truong",
   "license": "ISC",
   "bin": {
-    "smush": "./index.js"
+    "smush": "smush.js"
   },
   "bugs": {
     "url": "https://github.com/iRhuel/smush/issues"

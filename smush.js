@@ -1,14 +1,17 @@
 #!/usr/bin/env node
+
 const program = require('commander');
 const fs = require('fs');
 const resolve = require('path').resolve;
 const smush = require('./lib/smush');
 const fileWalk = require('./lib/files');
-const version = require('./package.json').version;
+const pkg = require('./package.json');
 
 program
     .arguments('[paths...]')
-    .version(version, '-v, --version')
+    .version(pkg.version, '-v, --version')
+    .usage('[options] [paths...]')
+    .description(pkg.description)
     .option('-r, --recursive', 'recursively parse subdirectories as well')
     .option('-o, --output [name]', 'specify output file name')
     .action(paths => {
@@ -49,5 +52,10 @@ program
                 });
             }
         });
+    })
+    .on('--help', () => {
+        console.log('\nExamples:\n');
+        console.log('   $ smush . ./dir ./dir/otherDir -o outputName');
+        console.log('   $ smush -o outputName . -r');
     })
     .parse(process.argv);

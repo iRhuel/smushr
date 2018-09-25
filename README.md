@@ -4,12 +4,10 @@ A command line tool to aggregate discrete data points across json files into a s
 structure of nested objects and arrays of indeterminant depth, allowing you to conveniently view all valid values for 
 all keys at all levels. This would be useful for large sets of similar or repetitive .json files.
 
-smushr searches a target directory and all subdirectories for .json files. It then combines all primitive data points
-that are not already represented into a single array under the same key. If the value at a key is an object, it 
-combines subsequent objects under the same key in the same way, preserving nested structure. If the value at a key is
-an array, it checks each object against present objects for key parity, and treats objects with the same keys as the 
-same object. Lastly, it writes the resultant object to a file `./smushed.json`, in the directory where the command was
-executed.
+smushr searches target directories and optionally all subdirectories for .json files. It then creates a result object
+with arrays under matching keys. It inserts all non-repeat data into its result key-array. It compares objects for key
+parity and recurses on matching objects to preserve nested structure. Lastly, it writes the resultant object to a file
+`smushed.json` (or optionally a file with custom name), in the directory where the command was executed.
 
 ## Getting Started
 
